@@ -1,0 +1,57 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/Admin/Desktop/mtcars.csv")
+print(df.head(5))
+print(df.head())
+
+x=[16,6,4,6,8]
+y=df.mpg
+plt.title("Histogram")
+plt.xlabel("frequency")
+plt.ylabel("mpg")
+plt.hist(y)
+plt.show()
+
+
+x=df.wt
+y=df.mpg
+plt.title("Scatter")
+plt.xlabel("weight")
+plt.ylabel("mpg")
+plt.scatter(x,y)
+plt.colorbar()
+
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/Admin/Desktop/mtcars.csv")
+x=df.hp
+y=df.mpg
+plt.title("bar plot")
+sns.barplot(x,y)
+plt.xlabel("transmission")
+plt.ylabel("mpg")
+#plt.colorbar()
+plt.show()
+
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/Admin/Desktop/mtcars.csv")
+x=df.mpg
+sns.boxplot(df['mpg'])
+#plt.boxplot(x)
+print(np.min(df.mpg))
+print(np.max(df.mpg))
+print(np.std(df.mpg))
+print(np.mean(df.mpg))
+print(np.median(df.mpg))
